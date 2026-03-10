@@ -6,7 +6,7 @@ const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
     role: "Frontend Developer",
-    bio: "Welcome to my portfolio. I’m excited to share the projects I’ve been building and my journey in frontend development.",
+    bio: "Welcome to my portfolio. I’m a developer who enjoys building web applications and continuously improving my skills.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
         secondary: { label: "Download CV", href: "/cv.pdf" },
