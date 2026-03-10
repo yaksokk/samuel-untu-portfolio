@@ -1,9 +1,10 @@
-import {Hero} from "../";
+import {About, Hero} from "../";
 
 function Home() {
   return (
     <>
       <Hero />
+      <About />
     </>
   );
 }
