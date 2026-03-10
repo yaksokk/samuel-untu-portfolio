@@ -1,5 +1,6 @@
 import Hero from './Hero/Hero';
 import Home from './home/Home';
 import About from './About/About';
+import Skill from './Skills/Skills';
 
-export { About,Home, Hero }
+export { About,Home, Hero, Skill };
