@@ -12,8 +12,8 @@ const HERO_CONTENT = {
         secondary: { label: "Download CV", href: "/cv.pdf" },
     },
     social: [
-        { icon: FiGithub, href: "https://github.com", label: "GitHub" },
-        { icon: FiLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+        { icon: FiGithub, href: "https://github.com/yaksokk", label: "GitHub" },
+        { icon: FiLinkedin, href: "https://www.linkedin.com/in/samuel-untu-0323783a5/", label: "LinkedIn" },
     ],
 };
 // ─────────────────────────────────────────────────────────────────────────────
