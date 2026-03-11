@@ -11,7 +11,7 @@ const CONTACT_INFO = {
     ],
 };
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdjennd";
 
 function Contact() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
