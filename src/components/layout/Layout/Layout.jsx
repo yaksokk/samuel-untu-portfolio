@@ -1,4 +1,4 @@
-import { Navbar } from "../";
+import { Navbar, Footer } from "../";
 
 function Layout({ children }) {
   return (
@@ -7,6 +7,7 @@ function Layout({ children }) {
       <main className="flex-1">
         {children}
       </main>
+      <Footer />
     </>
   );
 }
