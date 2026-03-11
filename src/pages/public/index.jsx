@@ -5,5 +5,6 @@ import Skill from './Skills/Skills';
 import Interest from './Interest/Interest';
 import Project from './Project/Project';
 import Certificate from './Certificate/Certificate';
+import Contact from './Contact/Contact';
 
-export { About,Home, Hero, Skill, Interest, Project, Certificate };
+export { About, Contact, Home, Hero, Skill, Interest, Project, Certificate };
