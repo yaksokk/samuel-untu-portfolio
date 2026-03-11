@@ -12,7 +12,6 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sync class "dark" di <html> setiap kali isDark berubah (termasuk saat pertama load)
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -21,15 +20,15 @@ function Navbar() {
     }
   }, [isDark]);
 
-  const navItems = [
+const navItems = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Learning", href: "#learning" },
+    { label: "Skills", href: "#skill" },
+    { label: "Interests", href: "#interests" },
     { label: "Project", href: "#project" },
     { label: "Certificates", href: "#certificate" },
     { label: "Contact", href: "#contact" },
-  ];
+];
 
   // Toggle cukup ubah state, useEffect yang urus DOM
   const toggleDarkMode = () => setIsDark((prev) => !prev);
