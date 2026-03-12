@@ -2,7 +2,7 @@
 
 This is my personal portfolio website — built to introduce myself, share what I've learned, and showcase my journey as a developer.
 
-🔗 **Live:** [your-domain.vercel.app](https://samuel-untu.vercel.app/)
+🔗 **Live:** [Samuel-Untu](https://samuel-untu.vercel.app/)
 
 ## Built With
 
@@ -17,16 +17,6 @@ This is my personal portfolio website — built to introduce myself, share what 
 pnpm install
 pnpm dev
 ```
-
-## Sections
-
-- **Hero** — introduction and quick links
-- **About** — bio and education
-- **Skills** — tools and technologies I work with
-- **Interests** — books I've read and active life
-- **Projects** — things I've built
-- **Certificates** — credentials
-- **Contact** — reach out to me
 
 ## Contact
 
