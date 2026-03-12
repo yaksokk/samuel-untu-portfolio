@@ -1,36 +1,36 @@
-# Samuel Untu — Frontend Portfolio
+# Hi, I'm Samuel Untu 👋
 
-Personal portfolio website built with React, Vite, and Tailwind CSS v4.
+This is my personal portfolio website — built to introduce myself, share what I've learned, and showcase my journey as a developer.
 
-## Tech Stack
+🔗 **Live:** [your-domain.vercel.app](https://samuel-untu.vercel.app/)
+
+## Built With
 
 - **React 19** + **Vite 7**
-- **Tailwind CSS v4** — theme via `@theme` di `globals.css`, tanpa `tailwind.config.js`
-- **pnpm** — package manager
-- **react-icons v5** — ikon
+- **Tailwind CSS v4**
+- **pnpm**
+- **react-icons v5**
 
 ## Getting Started
 
 ```bash
-# Install dependencies
 pnpm install
-
-# Development server
 pnpm dev
-
-# Build for production
-pnpm build
 ```
 
-## Features
+## Sections
 
-- Dark / Light mode toggle (default dark)
-- Responsive layout
-- Smooth scroll navigation
-- Animasi fade-in pada Hero section
+- **Hero** — introduction and quick links
+- **About** — bio and education
+- **Skills** — tools and technologies I work with
+- **Interests** — books I've read and active life
+- **Projects** — things I've built
+- **Certificates** — credentials
+- **Contact** — reach out to me
 
-## Notes
+## Contact
 
-- Dark mode menggunakan class strategy — toggle class `dark` di `<html>`
-- Import alias `@` mengarah ke folder `src/`
-- Opacity modifier Tailwind (`text-text/50`) tidak reliable untuk custom `@theme` token — gunakan `stone-*` sebagai alternatif
+- 📧 samueluntu7@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/samuel-untu-0323783a5/)
+- 🐙 [GitHub](https://github.com/yaksokk)
+- 📸 [Instagram](https://instagram.com/samueluntu)
