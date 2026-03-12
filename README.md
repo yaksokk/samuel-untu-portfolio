@@ -6,10 +6,8 @@ This is my personal portfolio website — built to introduce myself, share what 
 
 ## Built With
 
-- **React 19** + **Vite 7**
+- **ReactJs** + **Vite**
 - **Tailwind CSS v4**
-- **pnpm**
-- **react-icons v5**
 
 ## Getting Started
 
