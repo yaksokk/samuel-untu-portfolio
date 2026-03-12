@@ -1,7 +1,6 @@
 import { FiArrowRight, FiGithub, FiLinkedin } from "react-icons/fi";
 import { Button } from "@/components/common";
 
-// ─── Edit konten di sini ──────────────────────────────────────────────────────
 const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
@@ -16,7 +15,6 @@ const HERO_CONTENT = {
         { icon: FiLinkedin, href: "https://www.linkedin.com/in/samuel-untu-0323783a5/", label: "LinkedIn" },
     ],
 };
-// ─────────────────────────────────────────────────────────────────────────────
 
 function Hero() {
     return (
@@ -29,7 +27,11 @@ function Hero() {
                 className="pointer-events-none absolute -top-32 -right-32 h-120 w-120 rounded-full bg-primary/5 dark:bg-primary-dark/5 blur-3xl"
             />
             <div className="relative z-10 max-w-2xl w-full animate-fade-in">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-stone-400 dark:text-stone-100">
+                <span className="inline-flex items-center gap-2 mb-6 text-xs font-medium tracking-widest uppercase text-primary dark:text-primary-dark">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary dark:bg-primary-dark animate-pulse" />
+                    Available for work
+                </span>
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-stone-900 dark:text-stone-100">
                     {HERO_CONTENT.greeting}{" "}
                     <span className="text-primary dark:text-primary-dark">
                         {HERO_CONTENT.name}
