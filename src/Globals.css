@@ -98,3 +98,5 @@ html.dark body {
 .marquee-wrapper:hover .animate-marquee {
   animation-play-state: paused;
 }
+
+.animation-delay-100 { animation-delay: 0.1s; opacity: 0; }

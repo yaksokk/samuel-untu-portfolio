@@ -5,7 +5,7 @@ const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
     role: "Frontend Developer",
-    bio: "Welcome to my portfolio. I’m a developer who enjoys building web applications and continuously improving my skills.",
+    bio: "Welcome to my portfolio. I'm a developer who enjoys building web applications and continuously improving my skills.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
         secondary: { label: "Download CV", href: "/cv.pdf" },
@@ -18,20 +18,19 @@ const HERO_CONTENT = {
 
 function Hero() {
     return (
-        <section
-            id="hero"
-            className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden"
-        >
-            <div
-                aria-hidden
-                className="pointer-events-none absolute -top-32 -right-32 h-120 w-120 rounded-full bg-primary/5 dark:bg-primary-dark/5 blur-3xl"
-            />
-            <div className="relative z-10 max-w-2xl w-full animate-fade-in">
-                <span className="inline-flex items-center gap-2 mb-6 text-xs font-medium tracking-widest uppercase text-primary dark:text-primary-dark">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden">
+
+            <div aria-hidden className="pointer-events-none absolute -top-32 -right-32 h-120 w-120 rounded-full bg-primary/5 dark:bg-primary-dark/5 blur-3xl" />
+            <div aria-hidden className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/5 dark:bg-primary-dark/5 blur-3xl" />
+
+            <div className="relative z-10 max-w-2xl w-full">
+
+                <span className="animate-slide-up animation-delay-100 inline-flex items-center gap-2 mb-6 text-xs font-medium tracking-widest uppercase text-primary dark:text-primary-dark">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary dark:bg-primary-dark animate-pulse" />
                     Available for work
                 </span>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-stone-900 dark:text-stone-100">
+
+                <h1 className="animate-slide-up animation-delay-200 text-4xl md:text-6xl font-bold leading-tight text-stone-900 dark:text-stone-100">
                     {HERO_CONTENT.greeting}{" "}
                     <span className="text-primary dark:text-primary-dark">
                         {HERO_CONTENT.name}
@@ -42,18 +41,15 @@ function Hero() {
                         {HERO_CONTENT.role}
                     </span>
                 </h1>
-                <p className="mt-6 text-base md:text-lg text-stone-500 dark:text-stone-400 max-w-lg leading-relaxed">
+
+                <p className="animate-slide-up animation-delay-400 mt-6 text-base md:text-lg text-stone-500 dark:text-stone-400 max-w-lg leading-relaxed">
                     {HERO_CONTENT.bio}
                 </p>
 
-                <div className="mt-10 flex flex-wrap items-center gap-3">
+                <div className="animate-slide-up animation-delay-600 mt-10 flex flex-wrap items-center gap-3">
                     <Button
                         variant="primary"
-                        onClick={() =>
-                            document
-                                .querySelector(HERO_CONTENT.cta.primary.href)
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
+                        onClick={() => document.querySelector(HERO_CONTENT.cta.primary.href)?.scrollIntoView({ behavior: "smooth" })}
                     >
                         {HERO_CONTENT.cta.primary.label}
                         <FiArrowRight size={16} />
@@ -68,20 +64,12 @@ function Hero() {
                     </Button>
                 </div>
 
-                <div className="mt-8 flex items-center gap-4">
+                <div className="animate-slide-up animation-delay-600 mt-8 flex items-center gap-4">
                     {HERO_CONTENT.social.map(({ icon: Icon, href, label }) => (
-                        <a
-                            key={label}
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={label}
-                            className="text-stone-400 dark:text-stone-600 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200"
-                        >
+                        <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-stone-400 dark:text-stone-600 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200">
                             <Icon size={20} />
                         </a>
                     ))}
-
                     <span className="h-px w-12 bg-stone-200 dark:bg-stone-700" />
                     <span className="text-xs tracking-wider text-stone-400 dark:text-stone-600">
                         Let's connect
