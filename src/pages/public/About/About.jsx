@@ -2,7 +2,7 @@ import profilePhoto from "@/assets/img/samuel2.jpg";
 
 const ABOUT_CONTENT = {
     bio: [
-        "A Computer Science graduate with a passion for technology and software development. I enjoy building things for the web — currently focusing on front-end development while continuing to explore the full-stack world.",
+        "A Computer Science graduate with a passion for technology and software development. I enjoy building things for the web — currently focusing on Frontend Developer while continuing to explore the full-stack world.",
         "Always curious, always learning.",
     ],
     education: [
