@@ -12,7 +12,7 @@ const HERO_CONTENT = {
     },
     social: [
         { icon: FiGithub, href: "https://github.com/yaksokk", label: "GitHub" },
-        { icon: FiLinkedin, href: "https://www.linkedin.com/in/samuel-untu-0323783a5/", label: "LinkedIn" },
+        { icon: FiLinkedin, href: "https://www.linkedin.com/in/samuelntu/", label: "LinkedIn" },
     ],
 };
 

@@ -6,7 +6,7 @@ const CONTACT_INFO = {
     email: "samueluntu7@gmail.com",
     socials: [
         { icon: FiGithub, label: "GitHub", href: "https://github.com/yaksokk" },
-        { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/samuel-untu-0323783a5/" },
+        { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/samueluntu/" },
         { icon: FiInstagram, label: "Instagram", href: "https://instagram.com/samueluntu" },
     ],
 };
