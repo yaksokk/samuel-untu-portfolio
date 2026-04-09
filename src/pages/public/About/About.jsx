@@ -1,14 +1,15 @@
 import profilePhoto from "@/assets/img/samuel2.jpg";
+import { FaLocationDot } from "react-icons/fa6";
 
 const ABOUT_CONTENT = {
     bio: [
-        "A Computer Science graduate with a passion for technology and software development. I enjoy building things for the web — currently focusing on Frontend Developer while continuing to explore the full-stack world.",
-        "Always curious, always learning.",
+        "I'm a Computer Science graduate from Universitas Sam Ratulangi who fell in love with coding and never looked back. I enjoy turning ideas into working applications and I'm always looking for ways to improve my craft.",
     ],
+    location: "Manado, Indonesia",
     education: [
         {
-            institution: "Sam Ratulangi University",
-            major: "Computer Science",
+            institution: "Universitas Sam Ratulangi",
+            major: "Teknik Informatika",
             year: "2021 – 2025",
         },
     ],
@@ -22,17 +23,9 @@ function About() {
 
                     <div className="w-full md:w-auto shrink-0 animate-slide-right">
                         <div className="relative w-48 h-64 md:w-60 md:h-80 mx-auto md:mx-0">
-
                             <div className="absolute inset-0 rounded-2xl bg-primary/20 dark:bg-primary-dark/20 blur-2xl scale-110 -z-10" />
-
-                            <img
-                                src={profilePhoto}
-                                alt="Samuel Untu"
-                                className="relative w-full h-full object-cover rounded-2xl shadow-xl shadow-black/20 dark:shadow-black/50"
-                            />
-
+                            <img src={profilePhoto} alt="Samuel Untu" className="relative w-full h-full object-cover rounded-2xl shadow-xl shadow-black/20 dark:shadow-black/50" />
                             <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-primary dark:border-primary-dark -z-10" />
-
                             <div className="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-primary dark:bg-primary-dark opacity-60" />
                         </div>
                     </div>
@@ -46,13 +39,15 @@ function About() {
                         </h2>
 
                         {ABOUT_CONTENT.bio.map((paragraph, i) => (
-                            <p
-                                key={i}
-                                className={`animate-slide-up text-base md:text-lg text-stone-500 dark:text-stone-400 leading-relaxed ${i === 0 ? "animation-delay-400" : "animation-delay-600"}`}
-                            >
+                            <p key={i} className="animate-slide-up animation-delay-400 text-base md:text-lg text-stone-500 dark:text-stone-400 leading-relaxed">
                                 {paragraph}
                             </p>
                         ))}
+
+                        <p className="animate-slide-up animation-delay-600 text-sm text-stone-400 dark:text-stone-600 flex items-center gap-2">
+                            <FaLocationDot /> {ABOUT_CONTENT.location}
+                        </p>
+
                         <div className="animate-slide-up animation-delay-600 pt-2 border-t border-border dark:border-border-dark">
                             <p className="text-xs font-medium tracking-widest uppercase text-primary dark:text-primary-dark mb-3">
                                 Education
