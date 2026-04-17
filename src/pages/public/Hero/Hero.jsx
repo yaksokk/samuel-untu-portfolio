@@ -5,7 +5,7 @@ const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
     role: "Frontend Developer",
-    bio: "Welcome to my portfolio. I'm a developer who enjoys building web applications and continuously improving my skills.",
+    bio: "I enjoy turning ideas into real web applications focused on frontend, curious about everything else.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
         secondary: { label: "Download CV", href: "/cv.pdf" },
@@ -58,7 +58,7 @@ function Hero() {
                     <Button
                         variant="outline"
                         onClick={() => window.open(HERO_CONTENT.cta.secondary.href, "_blank")}
-                        className="text-stone-900! dark:text-stone-100!"
+                        className="text-stone-100! border-stone-500! hover:border-primary!"
                     >
                         {HERO_CONTENT.cta.secondary.label}
                     </Button>
