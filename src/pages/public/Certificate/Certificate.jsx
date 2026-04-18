@@ -12,7 +12,7 @@ const CERTIFICATES = [
     { img: cert4, name: "PMM 3" },
 ];
 
-const CERTS_LOOP = [...CERTIFICATES, ...CERTIFICATES, ...CERTIFICATES, ...CERTIFICATES];
+const certPhotos = CERTIFICATES.map((c) => c.img);
 
 function Certificate() {
     return (
@@ -27,35 +27,8 @@ function Certificate() {
                         My Credentials
                     </h2>
                 </div>
-                <div className="max-w-3xl mx-auto">
-                    <Carousel
-                        items={CERTS_LOOP}
-                        speed="60s"
-                        renderItem={(cert, i) => (
-                            <div
-                                key={i}
-                                className="shrink-0 w-64 rounded-2xl overflow-hidden
-                  bg-surface dark:bg-surface-dark
-                  border border-border dark:border-border-dark
-                  hover:border-primary dark:hover:border-primary-dark
-                  transition-all duration-300 group"
-                            >
-                                <div className="w-full p-2">
-                                    <img
-                                        src={cert.img}
-                                        alt={cert.name}
-                                        className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <p className="text-sm font-medium text-stone-900 dark:text-stone-100 text-center">
-                                        {cert.name}
-                                    </p>
-                                </div>
-                            </div>
-                        )}
-                    />
-                </div>
+
+                <Carousel items={CERTIFICATES} aspect="aspect-video" cols={4} />
 
             </div>
         </section>
