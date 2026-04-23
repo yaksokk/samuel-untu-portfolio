@@ -1,4 +1,3 @@
-import profilePhoto from "@/assets/img/samuel2.jpg";
 import { FaLocationDot } from "react-icons/fa6";
 
 const ABOUT_CONTENT = {
@@ -16,6 +15,7 @@ const ABOUT_CONTENT = {
 };
 
 function About() {
+    const profilePhoto = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776965120/1706660573242_hp0dqs.jpg"
     return (
         <section id="about" className="min-h-screen flex items-center px-6 md:px-12">
             <div className="mx-auto max-w-7xl w-full">
