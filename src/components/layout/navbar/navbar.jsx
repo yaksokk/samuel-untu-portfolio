@@ -24,9 +24,9 @@ const navItems = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skill" },
-    { label: "Interests", href: "#interests" },
     { label: "Project", href: "#project" },
     { label: "Certificates", href: "#certificate" },
+    { label: "Interests", href: "#interests" },
     { label: "Contact", href: "#contact" },
 ];
 

@@ -6,9 +6,9 @@ function Home() {
       <Hero />
       <About />
       <Skill />
-      <Interest />
       <Project />
       <Certificate />
+      <Interest />
       <Contact />
     </>
   );
