@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { Carousel } from "../../../components/common";
 
-import badminton1 from "@/assets/img/nature1.jpg";
-import badminton2 from "@/assets/img/bg.jpg";
-import badminton3 from "@/assets/img/nature1.jpg";
-import badminton4 from "@/assets/img/bg.jpg";
+
 import running1 from "@/assets/img/nature1.jpg";
 import running2 from "@/assets/img/bg.jpg";
 import running3 from "@/assets/img/nature1.jpg";
-import hiking1 from "@/assets/img/nature1.jpg";
-import hiking2 from "@/assets/img/bg.jpg";
-import hiking3 from "@/assets/img/nature1.jpg";
 
+const badminton1 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968476/IMG_20230427_002044_489_as9z97.webp";
+const badminton2 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968476/1710189474607_p1u1rj.jpg";
+const badminton3 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968476/IMG-20221212-WA0019_fuz3nz.jpg";
+
+const hiking1 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968843/1747031271793_ydp8qw.jpg";
+const hiking2 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968842/1733049891082_oicrot.jpg";
+const hiking3 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968844/1733049891344_y9vsjm.jpg";
 const ACTIVITIES = [
-    { label: "Badminton", photos: [badminton1, badminton2, badminton3, badminton4] },
+    { label: "Badminton", photos: [badminton1, badminton2, badminton3] },
     { label: "Running", photos: [running1, running2, running3] },
     { label: "Hiking", photos: [hiking1, hiking2, hiking3] },
 ];
