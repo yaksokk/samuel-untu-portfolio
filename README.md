@@ -11,22 +11,12 @@ Welcome to my personal portfolio website! This project showcases my work as a fr
 | **React 19** | UI Framework |
 | **Vite** | Build Tool & Dev Server |
 | **Tailwind CSS v4** | Styling |
-| **ESLint** | Code Quality |
 
 ## 🚀 Quick Start
 
 ```bash
-# Install dependencies
 pnpm install
-
-# Start development server
 pnpm dev
-
-# Build for production
-pnpm build
-
-# Run linter
-pnpm lint
 ```
 
 ## 📂 Project Structure
@@ -38,14 +28,6 @@ src/
 ├── assets/         # Images & static files
 └── App.jsx         # Main app component
 ```
-
-## 🎯 About This Project
-
-This portfolio demonstrates my understanding of:
-- Modern React patterns & best practices
-- Building performant web applications with Vite
-- Responsive design with Tailwind CSS
-- Code quality & linting standards
 
 ## 💬 Get In Touch
 
