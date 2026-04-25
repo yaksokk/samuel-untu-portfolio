@@ -209,7 +209,7 @@ function Certificate() {
                         My <span className="text-gradient">Credentials</span>
                     </h2>
                     <p className="mt-4 text-text-muted dark:text-text-muted-dark max-w-xl text-base">
-                        Sertifikat dan sertifikasi yang telah saya peroleh selama perjalanan belajar dan berkarir.
+                        Certificates and certifications I have obtained during my learning and career journey.
                     </p>
                 </div>
 
