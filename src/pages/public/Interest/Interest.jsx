@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { FiChevronLeft, FiChevronRight, FiBookOpen, FiActivity, FiMessageSquare } from "react-icons/fi";
+import { useState, useEffect } from "react";
+import { FiX, FiBookOpen, FiActivity, FiMessageSquare, FiZoomIn } from "react-icons/fi";
 
 const badminton1 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968476/IMG_20230427_002044_489_as9z97.webp";
 const badminton2 = "https://res.cloudinary.com/ddim50bkl/image/upload/v1776968476/1710189474607_p1u1rj.jpg";
@@ -37,92 +37,79 @@ const BOOKS = [
     },
 ];
 
-function PhotoCarousel({ photos }) {
-    const [current, setCurrent] = useState(0);
-
-    const next = () => setCurrent((prev) => (prev + 1) % photos.length);
-    const prev = () => setCurrent((prev) => (prev - 1 + photos.length) % photos.length);
+function Lightbox({ src, onClose }) {
+    useEffect(() => {
+        const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+        document.addEventListener("keydown", handleKey);
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.removeEventListener("keydown", handleKey);
+            document.body.style.overflow = "";
+        };
+    }, [onClose]);
 
     return (
-        <div className="relative group">
-            {/* Main Image */}
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-surface-elevated dark:bg-surface-elevated-dark">
-                <img
-                    src={photos[current]}
-                    alt={`Photo ${current + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-dark/40 via-transparent to-transparent" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pt-20" onClick={onClose}>
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" />
+            <button onClick={onClose} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-dark border border-border-dark text-text-dark flex items-center justify-center hover:bg-primary-dark hover:text-white transition-all duration-300 z-10">
+                <FiX size={18} />
+            </button>
+            <img
+                src={src}
+                alt="Preview"
+                className="relative z-10 max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+            />
+        </div>
+    );
+}
 
-                <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-dark/60 backdrop-blur-sm text-white text-xs font-medium">
-                    {current + 1} / {photos.length}
-                </div>
-            </div>
+function PhotoGrid({ photos }) {
+    const [lightboxSrc, setLightboxSrc] = useState(null);
 
-            {photos.length > 1 && (
-                <>
-                    <button
-                        onClick={prev}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface/90 dark:bg-surface-dark/90 border border-border dark:border-border-dark text-text dark:text-text-dark flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary"
-                    >
-                        <FiChevronLeft size={20} />
-                    </button>
-                    <button
-                        onClick={next}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface/90 dark:bg-surface-dark/90 border border-border dark:border-border-dark text-text dark:text-text-dark flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary"
-                    >
-                        <FiChevronRight size={20} />
-                    </button>
-                </>
-            )}
-
-            {/* Thumbnails */}
-            <div className="flex gap-2 mt-3 justify-center">
+    return (
+        <>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-7">
                 {photos.map((photo, i) => (
-                    <button
+                    <div
                         key={i}
-                        onClick={() => setCurrent(i)}
-                        className={`w-16 h-12 rounded-lg overflow-hidden transition-all duration-300 ${
-                            i === current
-                                ? "ring-2 ring-primary dark:ring-primary-dark ring-offset-2 ring-offset-bg dark:ring-offset-bg-dark"
-                                : "opacity-50 hover:opacity-80"
-                        }`}
+                        className="group relative aspect-square rounded-xl overflow-hidden cursor-zoom-in bg-surface-dark border border-border-dark hover:border-primary-dark transition-all duration-300 card-lift"
+                        onClick={() => setLightboxSrc(photo)}
                     >
-                        <img src={photo} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
-                    </button>
+                        <img
+                            src={photo}
+                            alt={`photo-${i}`}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <FiZoomIn size={24} className="text-white" />
+                        </div>
+                    </div>
                 ))}
             </div>
-        </div>
+            {lightboxSrc && <Lightbox src={lightboxSrc} onClose={() => setLightboxSrc(null)} />}
+        </>
     );
 }
 
 function BookCard({ book, index }) {
     return (
         <div
-            className="group relative p-6 rounded-2xl bg-surface dark:bg-surface-dark border border-border dark:border-border-dark hover:border-primary dark:hover:border-primary-dark card-lift transition-all duration-500"
+            className="group relative p-6 rounded-2xl bg-surface-dark border border-border-dark hover:border-primary-dark card-lift transition-all duration-500"
             style={{ animationDelay: `${index * 100}ms` }}
         >
-            <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center">
-                <FiMessageSquare size={14} className="text-primary dark:text-primary-dark" />
+            <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary-dark/10 flex items-center justify-center">
+                <FiMessageSquare size={14} className="text-primary-dark" />
             </div>
-
-            {/* Title & Author */}
             <div className="mb-4">
-                <h4 className="text-base font-bold text-text dark:text-text-dark leading-tight group-hover:text-primary dark:group-hover:text-primary-dark transition-colors duration-300">
+                <h4 className="text-base font-bold text-text-dark leading-tight group-hover:text-primary-dark transition-colors duration-300">
                     {book.title}
                 </h4>
-                <p className="text-xs text-primary dark:text-primary-dark mt-1 font-medium">
-                    {book.author}
-                </p>
+                <p className="text-xs text-primary-dark mt-1 font-medium">{book.author}</p>
             </div>
-
-            {/* Divider */}
-            <div className="h-px w-full bg-border dark:bg-border-dark mb-4" />
-
-            {/* Takeaway */}
-            <p className="text-sm text-text-muted dark:text-text-muted-dark leading-relaxed italic">
-                "{book.takeaway}"
-            </p>
+            <div className="h-px w-full bg-border-dark mb-4" />
+            <p className="text-sm text-text-muted-dark leading-relaxed italic">"{book.takeaway}"</p>
         </div>
     );
 }
@@ -134,60 +121,53 @@ function Interests() {
         <section id="interests" className="py-24 px-6 md:px-12">
             <div className="max-w-6xl mx-auto space-y-20">
 
-                {/* Section Header */}
-                <div className="text-center md:text-left">
-                    <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark text-xs font-semibold tracking-wider uppercase">
+                <div>
+                    <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary-dark/10 text-primary-dark text-xs font-semibold tracking-wider uppercase">
                         Beyond Code
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-text dark:text-text-dark">
+                    <h2 className="text-3xl md:text-5xl font-bold text-text-dark">
                         Interests & <span className="text-gradient">Hobbies</span>
                     </h2>
-                    <p className="mt-4 text-text-muted dark:text-text-muted-dark max-w-xl text-base">
-                        What I do when I'm not coding. Keeping balance between screen time and real life.
+                    <p className="mt-4 text-text-muted-dark max-w-xl text-base">
+                        What I do when I'm not coding keeping balance between screen time and real life.
                     </p>
                 </div>
 
-                {/* Active Life Section */}
-                <div className="space-y-8">
+                {/* Active Life */}
+                <div className="space-y-6">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-success-soft dark:bg-success-soft-dark flex items-center justify-center">
-                            <FiActivity size={20} className="text-success dark:text-success-dark" />
+                        <div className="w-10 h-10 rounded-xl bg-success-soft-dark flex items-center justify-center">
+                            <FiActivity size={20} className="text-success-dark" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-text dark:text-text-dark">
-                            Active Life
-                        </h3>
+                        <h3 className="text-xl font-bold text-text-dark">Active Life</h3>
                     </div>
 
-                    {/* Tab Buttons */}
                     <div className="flex gap-3">
                         {ACTIVITIES.map((activity, i) => (
                             <button
                                 key={i}
                                 onClick={() => setActiveTab(i)}
-                                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                                    activeTab === i
-                                        ? "bg-primary dark:bg-primary-dark text-white shadow-lg shadow-primary/25 dark:shadow-primary-dark/25"
-                                        : "bg-surface dark:bg-surface-dark text-text-muted dark:text-text-muted-dark border border-border dark:border-border-dark hover:border-primary dark:hover:border-primary-dark hover:text-primary dark:hover:text-primary-dark"
-                                }`}
+                                className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${activeTab === i
+                                    ? "bg-primary-dark text-white shadow-lg shadow-primary-dark/25"
+                                    : "bg-surface-dark text-text-muted-dark border border-border-dark hover:border-primary-dark hover:text-primary-dark"}`}
                             >
                                 {activity.label}
                             </button>
                         ))}
                     </div>
 
-                    {/* Carousel */}
-                    <PhotoCarousel photos={ACTIVITIES[activeTab].photos} />
+                    <div className="max-w-2xl mx-auto flex gap-3">
+                        <PhotoGrid photos={ACTIVITIES[activeTab].photos} key={activeTab} />
+                    </div>
                 </div>
 
-                {/* Books Section */}
-                <div className="space-y-8">
+                {/* Books */}
+                <div className="space-y-6">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-primary-glow/50 dark:bg-primary-glow-dark/50 flex items-center justify-center">
-                            <FiBookOpen size={20} className="text-primary dark:text-primary-dark" />
+                        <div className="w-10 h-10 rounded-xl bg-primary-dark/10 flex items-center justify-center">
+                            <FiBookOpen size={20} className="text-primary-dark" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-text dark:text-text-dark">
-                            Books & Takeaways
-                        </h3>
+                        <h3 className="text-xl font-bold text-text-dark">Books & Takeaways</h3>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
