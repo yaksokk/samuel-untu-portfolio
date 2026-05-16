@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const PROJECTS = [
     {
         id: 1,
-        title: "StockTracker IDX",
+        title: "Landing Page Collection",
         description: "Landing Page Collection Multi-purpose landing page collection built entirely with AI assistance",
         image: "https://res.cloudinary.com/ddim50bkl/image/upload/v1778915151/Screenshot_2026-05-16_150417_aezqtl.png",
         tags: ["AI Tools", "HTML", "CSS", "JavaScript"],
