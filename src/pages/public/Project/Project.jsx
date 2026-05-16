@@ -5,9 +5,9 @@ const PROJECTS = [
     {
         id: 1,
         title: "StockTracker IDX",
-        description: "Indonesian stock market tracking website with real-time watchlist, portfolio tracker, and data visualization using Yahoo Finance API. Features JWT authentication and Redis caching.",
-        image: "https://camo.githubusercontent.com/20ec5628b2659fd7315ea14b701f236b87f5539691cd7f7fa7387c8d9cb34db4/687474703a2f2f7777772e6d61726b657463616c6c732e696e2f77702d636f6e74656e742f75706c6f6164732f323032342f30362f53637265656e73686f742d323032342d30362d32332d61742d392e34302e3431254532253830254146414d2e706e67",
-        tags: ["React", "Express", "PostgreSQL", "Redis", "Yahoo Finance API"],
+        description: "Landing Page Collection Multi-purpose landing page collection built entirely with AI assistance",
+        image: "https://res.cloudinary.com/ddim50bkl/image/upload/v1778915151/Screenshot_2026-05-16_150417_aezqtl.png",
+        tags: ["AI Tools", "HTML", "CSS", "JavaScript"],
         github: "https://github.com/yaksokk",
         demo: null,
         isPrivate: false,
