@@ -9,7 +9,7 @@ const HERO_CONTENT = {
     bio: "I enjoy turning ideas into real web applications focused on frontend, curious about everything else.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
-        secondary: { label: "Download CV", href: "/cv.pdf" },
+        secondary: { label: "Download CV", href: "https://drive.google.com/file/d/1Mb4hf8RsFsKigNiyoP8OT23vFz-3pC9w/view?usp=sharing" },
     },
     social: [
         { icon: FiGithub, href: "https://github.com/yaksokk", label: "GitHub" },
