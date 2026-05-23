@@ -34,7 +34,7 @@ function GitHubActivity() {
                 </div>
 
                 {/* Calendar Card */}
-                <div className="glass rounded-2xl p-6 md:p-8 glow-blue mb-6">
+                <div className="glass rounded-2xl p-6 md:p-8 glow-blue mb-6 max-w-5xl mx-auto">
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-2 text-text-muted-dark text-sm">
                             <FiGithub size={16} className="text-primary-dark" />
