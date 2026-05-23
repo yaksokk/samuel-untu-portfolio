@@ -72,24 +72,6 @@ function GitHubActivity() {
                     </div>
                 </div>
 
-                {/* Profile Card - clickable */}
-                <a
-                    href={`https://github.com/${GITHUB_USERNAME}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface-elevated-dark border border-border-dark hover:border-primary-dark hover:bg-primary-glow-dark transition-all duration-300 group w-fit"
-                >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-glow-dark group-hover:bg-primary-dark/20 transition-colors duration-300">
-                        <FiExternalLink size={15} className="text-primary-dark" />
-                    </div>
-                    <div>
-                        <p className="text-sm font-semibold text-text-dark group-hover:text-primary-dark transition-colors duration-300">
-                            github.com/{GITHUB_USERNAME}
-                        </p>
-                        <p className="text-xs text-text-subtle-dark">Profile</p>
-                    </div>
-                </a>
-
                 {/* Note */}
                 <p className="mt-5 text-xs text-text-subtle-dark text-center">
                     * Some contributions may be from private repositories and not reflected here.
