@@ -1,41 +1,31 @@
-# Hi, I'm Samuel Untu 👋
+# Samuel Untu - Personal Portfolio 👨‍💻
 
-Welcome to my personal portfolio website! This project showcases my work as a frontend developer and my journey learning web development.
+> A personal portfolio website built to showcase my projects, skills, and journey as a Full Stack Developer.
 
-🔗 **Live Site:** [samuel-untu-portfolio.vercel.app](https://samuel-untu-portfolio.vercel.app/)
+🔗 **Live Site:** [Samuel_Untu](https://samuel-untu-portfolio.vercel.app/)
+
+---
+
+## 📸 Preview
+
+![Portfolio Preview](https://res.cloudinary.com/ddim50bkl/image/upload/v1779511847/Screenshot_2026-05-23_124735_so5nbl.png)
+
+---
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
-|-----------|---------|
+|---|---|
 | **React 19** | UI Framework |
 | **Vite** | Build Tool & Dev Server |
 | **Tailwind CSS v4** | Styling |
 
-## 🚀 Quick Start
-
-```bash
-pnpm install
-pnpm dev
-```
-
-## 📂 Project Structure
-
-```
-src/
-├── components/     # Reusable React components
-├── pages/          # Page components
-├── assets/         # Images & static files
-└── App.jsx         # Main app component
-```
+---
 
 ## 💬 Get In Touch
 
+I'm open to opportunities, collaborations, or just a good conversation!
+
 - 📧 **Email:** samueluntu7@gmail.com
-- 💼 **LinkedIn:** [Samuel Untu](https://www.linkedin.com/in/samuel-untu-0323783a5/)
-- 🐙 **GitHub:** [yaksokk](https://github.com/yaksokk)
+- 💼 **LinkedIn:** [Samuel Untu](https://www.linkedin.com/in/samuel-untu)
 - 📸 **Instagram:** [@samueluntu](https://instagram.com/samueluntu)
-
----
-
-Feel free to explore the code and reach out if you have any questions or opportunities! 😊
