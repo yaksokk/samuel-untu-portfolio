@@ -20,7 +20,7 @@ function GitHubActivity() {
             <div aria-hidden className="pointer-events-none absolute top-0 right-0 h-72 w-72 rounded-full bg-primary-dark/5 blur-3xl" />
             <div aria-hidden className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-accent-dark/5 blur-3xl" />
 
-            <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="relative z-10 max-w-6xl mx-auto">
 
                 {/* Header */}
                 <div className="mb-12">
