@@ -2,7 +2,7 @@
 
 > A personal portfolio website built to showcase my projects, skills, and journey as a Full Stack Developer.
 
-🔗 **Live Site:** [Samuel_Untu](https://samuel-untu-portfolio.vercel.app/)
+🔗 **Live Site:** [Samuel Untu](https://samuel-untu-portfolio.vercel.app/)
 
 ---
 
@@ -27,5 +27,5 @@
 I'm open to opportunities, collaborations, or just a good conversation!
 
 - 📧 **Email:** samueluntu7@gmail.com
-- 💼 **LinkedIn:** [Samuel Untu](https://www.linkedin.com/in/samuel-untu)
+- 💼 **LinkedIn:** [Samuel Untu](https://www.linkedin.com/in/samuel-untu-0323783a5/)
 - 📸 **Instagram:** [@samueluntu](https://instagram.com/samueluntu)
