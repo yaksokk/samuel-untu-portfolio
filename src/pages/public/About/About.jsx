@@ -24,7 +24,7 @@ function About() {
                     <div className="w-full md:w-auto shrink-0 animate-slide-right">
                         <div className="relative w-48 h-64 md:w-60 md:h-80 mx-auto md:mx-0">
                             <div className="absolute inset-0 rounded-2xl bg-primary/20 dark:bg-primary-dark/20 blur-2xl scale-110 -z-10" />
-                            <img src={profilePhoto} alt="Samuel Untu" className="relative w-full h-full object-cover rounded-2xl shadow-xl shadow-black/20 dark:shadow-black/50" />
+                            <img src={profilePhoto} alt="Samuel Untu" loading="lazy" className="relative w-full h-full object-cover rounded-2xl shadow-xl shadow-black/20 dark:shadow-black/50" />
                             <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-primary dark:border-primary-dark -z-10" />
                             <div className="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-primary dark:bg-primary-dark opacity-60" />
                         </div>
