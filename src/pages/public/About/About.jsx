@@ -8,7 +8,7 @@ const ABOUT_CONTENT = {
     education: [
         {
             institution: "Universitas Sam Ratulangi",
-            major: "Teknik Informatika",
+            major: "Informatics Engineering",
             year: "2021 – 2025",
         },
     ],
