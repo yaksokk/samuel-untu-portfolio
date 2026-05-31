@@ -5,7 +5,7 @@ const PROJECTS = [
     {
         id: 1,
         title: "Landing Page Collection",
-        description: "Landing Page Collection Multi-purpose landing page collection built entirely with AI assistance",
+        description: "A curated collection of multi-purpose landing pages — designed, reviewed, and refined using AI as a development tool to accelerate workflow while maintaining code quality.",
         image: "https://res.cloudinary.com/ddim50bkl/image/upload/v1778915151/Screenshot_2026-05-16_150417_aezqtl.png",
         tags: ["AI Tools", "HTML", "CSS", "JavaScript"],
         github: "https://github.com/yaksokk/landing-page-collection",
