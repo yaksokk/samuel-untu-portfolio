@@ -66,13 +66,13 @@ function Hero() {
     }, []);
 
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden bg-gradient-animated pt-24">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden bg-gradient-animated pt-17">
             <div aria-hidden className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-primary-dark/10 blur-3xl animate-float" />
             <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent-dark/5 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
             <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-600px w-600px rounded-full bg-primary-dark/5 blur-3xl animate-float" style={{ animationDelay: "4s" }} />
 
-            <div className="relative z-10 max-w-4xl w-full">
-                <div className="animate-slide-up animation-delay-100 inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-success-soft-dark border border-success-dark/20 text-xs font-semibold tracking-wider uppercase text-success-dark">
+            <div className="relative z-10 max-w-2xl w-full">
+                <div className="animate-slide-up animation-delay-100 inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full bg-success-soft-dark border border-success-dark/20 text-xs font-semibold tracking-wider uppercase text-success-dark">
                     <span className="relative flex h-2.5 w-2.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-dark opacity-75" />
                         <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success-dark" />
@@ -88,11 +88,11 @@ function Hero() {
                     <TypewriterText texts={HERO_CONTENT.roles} />
                 </h1>
 
-                <p className="animate-slide-up animation-delay-400 mt-6 text-base md:text-lg text-text-muted-dark leading-relaxed">
+                <p className="animate-slide-up animation-delay-400 mt-7 text-base md:text-lg text-text-muted-dark leading-relaxed">
                     {HERO_CONTENT.bio}
                 </p>
 
-                <div className="animate-slide-up animation-delay-600 mt-10 flex flex-wrap items-center gap-4">
+                <div className="animate-slide-up animation-delay-600 mt-7 flex flex-wrap items-center gap-4">
                     <Button variant="primary" onClick={() => document.querySelector(HERO_CONTENT.cta.primary.href)?.scrollIntoView({ behavior: "smooth" })} className="group relative overflow-hidden px-6 py-3 text-base">
                         <span className="relative z-10 flex items-center gap-2">
                             {HERO_CONTENT.cta.primary.label}
@@ -107,7 +107,7 @@ function Hero() {
                     </Button>
                 </div>
 
-                <div className="animate-slide-up animation-delay-700 mt-10 flex items-center gap-4">
+                <div className="animate-slide-up animation-delay-700 mt-7 flex items-center gap-4">
                     {HERO_CONTENT.social.map(({ icon: Icon, href, label }) => (
                         <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="group flex items-center justify-center w-11 h-11 rounded-xl bg-surface-dark border border-border-dark text-text-subtle-dark hover:border-primary-dark hover:text-primary-dark hover:bg-primary-glow-dark transition-all duration-300">
                             <Icon size={20} className="transition-transform duration-300 group-hover:scale-110" />
