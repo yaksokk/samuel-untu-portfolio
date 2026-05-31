@@ -6,7 +6,7 @@ const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
     roles: ["Frontend Developer", "React Developer", "Web Developer"],
-    bio: "Frontend Developer with real-world freelance experience, having built a student admission system and a school library management app from scratch. I focus on React, care deeply about clean code and user experience, and I'm currently expanding into TypeScript and PostgreSQL to build more reliable, scalable applications.",
+    bio: "Frontend Developer with freelance experience, focused on React and building things that work well. Currently expanding into TypeScript and PostgreSQL.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
         secondary: { label: "Download CV", href: "https://drive.google.com/file/d/1Mb4hf8RsFsKigNiyoP8OT23vFz-3pC9w/view?usp=sharing" },
@@ -71,7 +71,7 @@ function Hero() {
             <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent-dark/5 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
             <div aria-hidden className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-600px w-600px rounded-full bg-primary-dark/5 blur-3xl animate-float" style={{ animationDelay: "4s" }} />
 
-            <div className="relative z-10 max-w-2xl w-full">
+            <div className="relative z-10 max-w-4xl w-full">
                 <div className="animate-slide-up animation-delay-100 inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-success-soft-dark border border-success-dark/20 text-xs font-semibold tracking-wider uppercase text-success-dark">
                     <span className="relative flex h-2.5 w-2.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-dark opacity-75" />
@@ -88,7 +88,7 @@ function Hero() {
                     <TypewriterText texts={HERO_CONTENT.roles} />
                 </h1>
 
-                <p className="animate-slide-up animation-delay-400 mt-6 text-base md:text-lg text-text-muted-dark max-w-lg leading-relaxed">
+                <p className="animate-slide-up animation-delay-400 mt-6 text-base md:text-lg text-text-muted-dark leading-relaxed">
                     {HERO_CONTENT.bio}
                 </p>
 
