@@ -6,7 +6,7 @@ const HERO_CONTENT = {
     greeting: "Hi, I'm",
     name: "Samuel Untu",
     roles: ["Frontend Developer", "React Developer", "Web Developer"],
-    bio: "I enjoy turning ideas into real web applications focused on frontend, curious about everything else.",
+    bio: "Frontend Developer with real-world freelance experience, having built a student admission system and a school library management app from scratch. I focus on React, care deeply about clean code and user experience, and I'm currently expanding into TypeScript and PostgreSQL to build more reliable, scalable applications.",
     cta: {
         primary: { label: "See My Work", href: "#project" },
         secondary: { label: "Download CV", href: "https://drive.google.com/file/d/1Mb4hf8RsFsKigNiyoP8OT23vFz-3pC9w/view?usp=sharing" },
